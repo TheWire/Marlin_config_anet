@@ -579,6 +579,14 @@
 //#define E3_DRIVER_TYPE A4988
 //#define E4_DRIVER_TYPE A4988
 
+//** added for DRV8825 stepper drivers
+#define X_DRIVER_TYPE  DRV8825
+#define Y_DRIVER_TYPE  DRV8825
+#define Z_DRIVER_TYPE  DRV8825
+//#define Z2_DRIVER_TYPE DRV8825
+#define E0_DRIVER_TYPE DRV8825
+
+
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
 //** turned on to match anet config
@@ -627,14 +635,15 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
  //** changed from { 80, 80, 4000, 500 } to match anet config
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 100 }
+ //** values from anet { 100, 100, 400, 100 } doubled for DRV8825 1/32 streppers
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 200 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-  //** changed from { 300, 300, 5, 25 } to match anet config
+//** changed from { 300, 300, 5, 25 } to match anet config
 #define DEFAULT_MAX_FEEDRATE          { 400, 400, 8, 50 }
 
 /**
