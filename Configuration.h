@@ -591,7 +591,8 @@
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
 //** turned on to match anet config
-#define ENDSTOP_INTERRUPTS_FEATURE
+//** reverted back as mega with ramps has different pins
+//#define ENDSTOP_INTERRUPTS_FEATURE
 
 /**
  * Endstop Noise Filter
