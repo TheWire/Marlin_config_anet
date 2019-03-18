@@ -548,7 +548,8 @@
 #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 //** changed from false to match anet config
 #define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+//** commented out to stop affecting filament runout
+//#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 //** changed from false to match anet config
@@ -982,8 +983,9 @@
 #define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
-  //** inverted think this is correct. change from false to true
-  #define FIL_RUNOUT_INVERTING true // set to true to invert the logic of the sensor.
+  //** set filament runout to use pin 2 X_max_pin instead of servo header
+  #define FIL_RUNOUT_PIN 2
+  #define FIL_RUNOUT_INVERTING false // set to true to invert the logic of the sensor.
   //** we will use external pullups commented out
   //#define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
   #define FILAMENT_RUNOUT_SCRIPT "M600"
