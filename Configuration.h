@@ -985,7 +985,8 @@
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
   //** set filament runout to use pin 2 X_max_pin instead of servo header
   #define FIL_RUNOUT_PIN 2
-  #define FIL_RUNOUT_INVERTING false // set to true to invert the logic of the sensor.
+  //** test to see if setting to true fixed M600 at print start
+  #define FIL_RUNOUT_INVERTING true // set to true to invert the logic of the sensor.
   //** we will use external pullups commented out
   //#define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
   #define FILAMENT_RUNOUT_SCRIPT "M600"
