@@ -816,9 +816,11 @@
  */
  //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
-#define X_PROBE_OFFSET_FROM_EXTRUDER 20  // X offset: -left  +right  [of the nozzle]
+ //** changed again from 20 since V6 appears centred like probe
+#define X_PROBE_OFFSET_FROM_EXTRUDER 0  // X offset: -left  +right  [of the nozzle]
 //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
+ //** seems about same with V6
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 68  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
@@ -934,7 +936,8 @@
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 //** changed from 0 to match anet config
-#define X_MIN_POS -33
+//** changed from -33 for V6
+#define X_MIN_POS -10
 //** changed from 0 to match anet config
 #define Y_MIN_POS -10
 #define Z_MIN_POS 0
