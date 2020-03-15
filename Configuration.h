@@ -826,8 +826,7 @@
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
-//** chnaged from 10 to 20 to provide a bit more buffer
-#define MIN_PROBE_EDGE 20
+#define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
 //** changed from 8000 to match anet config
@@ -1100,12 +1099,12 @@
 
   //** because X_PROBE_OFFSET_FROM_EXTRUDER is 0
   //** just in, in either direction by MIN_PROBE_EDGE
-  #define LEFT_PROBE_BED_POSITION 20
-  #define RIGHT_PROBE_BED_POSITION 200
+  #define LEFT_PROBE_BED_POSITION 10
+  #define RIGHT_PROBE_BED_POSITION 210
   //** MIN_PROBE_EDGE + Y_PROBE_OFFSET_FROM_EXTRUDER
-  #define FRONT_PROBE_BED_POSITION 88
+  #define FRONT_PROBE_BED_POSITION 78
   //** bed size - MIN_PROBE_EDGE
-  #define BACK_PROBE_BED_POSITION 200
+  #define BACK_PROBE_BED_POSITION 210
 
   //#define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
