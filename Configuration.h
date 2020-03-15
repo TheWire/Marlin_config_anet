@@ -640,7 +640,8 @@
  */
  //** changed from { 80, 80, 4000, 500 } to match anet config
  //** values from anet { 100, 100, 400, 100 } doubled for DRV8825 1/32 streppers
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 200 }
+ //** extruder steps changed from 200 to 829 for pitan
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 829 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1087,10 +1088,21 @@
 
   // Set the boundaries for probing (where the probe can reach).
   //** commented these in set values from old anet config
-  #define LEFT_PROBE_BED_POSITION 15
-  #define RIGHT_PROBE_BED_POSITION 190
-  #define FRONT_PROBE_BED_POSITION 58
-  #define BACK_PROBE_BED_POSITION 170
+  //** chnaged again to better positono the probing old values:
+  
+  //**#define LEFT_PROBE_BED_POSITION 15
+  //**#define RIGHT_PROBE_BED_POSITION 190
+  //**#define FRONT_PROBE_BED_POSITION 58
+  //**#define BACK_PROBE_BED_POSITION 170
+
+  //** because X_PROBE_OFFSET_FROM_EXTRUDER is 0
+  //** just in, in either direction by MIN_PROBE_EDGE
+  #define LEFT_PROBE_BED_POSITION 10
+  #define RIGHT_PROBE_BED_POSITION 210
+  //** MIN_PROBE_EDGE + Y_PROBE_OFFSET_FROM_EXTRUDER
+  #define FRONT_PROBE_BED_POSITION 78
+  //** bed size - MIN_PROBE_EDGE
+  #define BACK_PROBE_BED_POSITION 210
 
   //#define LEFT_PROBE_BED_POSITION MIN_PROBE_EDGE
   //#define RIGHT_PROBE_BED_POSITION (X_BED_SIZE - MIN_PROBE_EDGE)
@@ -1104,7 +1116,8 @@
 
     // Beyond the probed grid, continue the implied tilt?
     // Default is to maintain the height of the nearest edge.
-    //#define EXTRAPOLATE_BEYOND_GRID
+    //** commented in when probe positions changed
+    #define EXTRAPOLATE_BEYOND_GRID
 
     //
     // Experimental Subdivision of the grid by Catmull-Rom method.
