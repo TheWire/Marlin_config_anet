@@ -938,8 +938,8 @@
 // Travel limits (mm) after homing, corresponding to endstop positions.
 //** changed from 0 to match anet config
 //** changed from -33 for V6
-//** changed from -10 to -15 for AM8
-#define X_MIN_POS -15
+//** changed from -10 to -14 for AM8
+#define X_MIN_POS -14
 //** changed from 0 to match anet config
 //** changed from -10 to 0 for AM8
 #define Y_MIN_POS 0
