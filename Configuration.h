@@ -1183,9 +1183,11 @@
   #define PROBE_PT_1_X 20
   #define PROBE_PT_1_Y 160
   #define PROBE_PT_2_X 20
-  #define PROBE_PT_2_Y 10
+  //** changed from 20 due to probe offset
+  #define PROBE_PT_2_Y 68
   #define PROBE_PT_3_X 180
-  #define PROBE_PT_3_Y 10
+  //** changed from 20 due to probe offset
+  #define PROBE_PT_3_Y 68
 #endif
 
 /**
