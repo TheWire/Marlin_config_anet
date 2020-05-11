@@ -1531,7 +1531,8 @@
  * you must uncomment the following option or it won't work.
  *
  */
-//#define SDSUPPORT
+//** commented in for bigtreetech lcd
+#define SDSUPPORT
 
 /**
  * SD CARD: SPI SPEED
@@ -1676,7 +1677,8 @@
 // ANET and Tronxy 20x4 Controller
 //
 //** commented in to match anet config
-#define ZONESTAR_LCD            // Requires ADC_KEYPAD_PIN to be assigned to an analog pin.
+//** commented out for bigtreetech
+//#define ZONESTAR_LCD            // Requires ADC_KEYPAD_PIN to be assigned to an analog pin.
                                   // This LCD is known to be susceptible to electrical interference
                                   // which scrambles the display.  Pressing any button clears it up.
                                   // This is a LCD2004 display with 5 analog buttons.
@@ -1762,7 +1764,8 @@
 // RepRapDiscount FULL GRAPHIC Smart Controller
 // http://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
 //
-//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+//** commented in for bigtreetech
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // ReprapWorld Graphical LCD
