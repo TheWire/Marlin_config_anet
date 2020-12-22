@@ -548,7 +548,8 @@
 //** changed from false to match anet config
 #define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 //** changed from false to match anet config
-#define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+//** changed from true to false for bltouch
+#define Z_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 //** commented out to stop affecting filament runout
 //#define X_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
@@ -641,7 +642,8 @@
  //** changed from { 80, 80, 4000, 500 } to match anet config
  //** values from anet { 100, 100, 400, 100 } doubled for DRV8825 1/32 streppers
  //** extruder steps changed from 200 to 829 for pitan
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 829 }
+ //** extruder steps changed from 829 to 1674 for e3d motor
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 1674 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -755,7 +757,8 @@
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
  //** commented in to match anet config on printer with bed leveling enabled
-#define FIX_MOUNTED_PROBE
+ //** commented out for bltouch
+//#define FIX_MOUNTED_PROBE
 
 /**
  * Z Servo Probe, such as an endstop switch on a rotating arm.
@@ -766,7 +769,8 @@
 /**
  * The BLTouch probe uses a Hall effect sensor and emulates a servo.
  */
-//#define BLTOUCH
+//** commented in for bltouch
+#define BLTOUCH
 #if ENABLED(BLTOUCH)
   //#define BLTOUCH_DELAY 375   // (ms) Enable and increase if needed
 #endif
@@ -818,11 +822,13 @@
  //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
  //** changed again from 20 since V6 appears centred like probe
-#define X_PROBE_OFFSET_FROM_EXTRUDER 0  // X offset: -left  +right  [of the nozzle]
+ //** changed from 0 to 30 for bltouch
+#define X_PROBE_OFFSET_FROM_EXTRUDER 30  // X offset: -left  +right  [of the nozzle]
 //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
  //** seems about same with V6
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 68  // Y offset: -front +behind [the nozzle]
+ //** changed from 68 to -10 for bltouch
+#define Y_PROBE_OFFSET_FROM_EXTRUDER -10  // Y offset: -front +behind [the nozzle]
 #define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
@@ -1185,10 +1191,12 @@
   #define PROBE_PT_1_Y 160
   #define PROBE_PT_2_X 20
   //** changed from 20 due to probe offset
-  #define PROBE_PT_2_Y 68
+  //** changed from 68 for bltouch
+  #define PROBE_PT_2_Y 30
   #define PROBE_PT_3_X 180
   //** changed from 20 due to probe offset
-  #define PROBE_PT_3_Y 68
+  //** changed from 68 for bltouch
+  #define PROBE_PT_3_Y 30
 #endif
 
 /**
@@ -1237,7 +1245,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//** enabled so z homeing probes bed
+//** enabled so z homing probes bed
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
