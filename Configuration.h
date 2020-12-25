@@ -937,10 +937,10 @@
 
 // The size of the print bed
 //** changed from 200 to match anet config
-//** changed from 220 to 217 after my bracket recoalibration
+//** changed from 220 to 217 after my bracket recalibration
 #define X_BED_SIZE 217
 //** changed from 200 to match anet config
-//** changed from 220 to 217 after my bracket recoalibration
+//** changed from 220 to 217 after my bracket recalibration
 #define Y_BED_SIZE 217
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
@@ -953,8 +953,9 @@
 //** changed from 0 to 4 after my bracket recoalibration
 #define Y_MIN_POS 4
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+//** to add MIN after my bracket recalibration
+#define X_MAX_POS X_BED_SIZE + X_MIN_POS
+#define Y_MAX_POS Y_BED_SIZE + Y_MIN_POS
 //** changed from 200 to match anet config
 #define Z_MAX_POS 240
 
