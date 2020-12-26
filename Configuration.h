@@ -822,8 +822,8 @@
  //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
  //** changed again from 20 since V6 appears centred like probe
- //** changed from 0 to 30 for bltouch
-#define X_PROBE_OFFSET_FROM_EXTRUDER 30  // X offset: -left  +right  [of the nozzle]
+ //** changed from 0 to -30 for bltouch
+#define X_PROBE_OFFSET_FROM_EXTRUDER -30  // X offset: -left  +right  [of the nozzle]
 //** changed from 10 to match anet config
  //** changed again from 0 to match anet config on printer with bed leveling enabled
  //** seems about same with V6
@@ -940,18 +940,18 @@
 //** changed from 220 to 217 after my bracket recalibration
 #define X_BED_SIZE 217
 //** changed from 200 to match anet config
-//** changed from 220 to 217 after my bracket recalibration
-#define Y_BED_SIZE 217
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 //** changed from 0 to match anet config
 //** changed from -33 for V6
 //** changed from -10 to -14 for AM8
-#define X_MIN_POS -14
+//** chnaged from -14 to 0 after my bracket recoalibration 
+#define X_MIN_POS 0
 //** changed from 0 to match anet config
 //** changed from -10 to 0 for AM8
-//** changed from 0 to 4 after my bracket recoalibration
-#define Y_MIN_POS 4
+//** changed from 0 to -4 after my bracket recoalibration
+#define Y_MIN_POS -4
 #define Z_MIN_POS 0
 //** to add MIN after my bracket recalibration
 #define X_MAX_POS X_BED_SIZE + X_MIN_POS
@@ -1191,16 +1191,16 @@
   //#define PROBE_PT_2_Y 20
   //#define PROBE_PT_3_X 170
   //#define PROBE_PT_3_Y 20
-  #define PROBE_PT_1_X 20
-  #define PROBE_PT_1_Y 160
-  #define PROBE_PT_2_X 20
+  #define PROBE_PT_1_X 10
+  #define PROBE_PT_1_Y 206
+  #define PROBE_PT_2_X 10
   //** changed from 20 due to probe offset
   //** changed from 68 for bltouch
-  #define PROBE_PT_2_Y 30
-  #define PROBE_PT_3_X 180
+  #define PROBE_PT_2_Y 10
+  #define PROBE_PT_3_X 187
   //** changed from 20 due to probe offset
   //** changed from 68 for bltouch
-  #define PROBE_PT_3_Y 30
+  #define PROBE_PT_3_Y 10
 #endif
 
 /**
