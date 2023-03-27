@@ -1,2 +1,2 @@
 # Marlin_config_anet
-Personal marlin config for Anet A8
+Personal marlin config for AM8
