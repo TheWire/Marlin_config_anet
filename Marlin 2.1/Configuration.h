@@ -1726,10 +1726,8 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-//** should include min
-#define X_MAX_POS X_BED_SIZE + X_MIN_POS
-//** should include min
-#define Y_MAX_POS Y_BED_SIZE + Y_MIN_POS
+#define X_MAX_POS X_BED_SIZE
+#define Y_MAX_POS Y_BED_SIZE
 //** changed from 200 to match anet config
 #define Z_MAX_POS 240
 //#define I_MIN_POS 0
