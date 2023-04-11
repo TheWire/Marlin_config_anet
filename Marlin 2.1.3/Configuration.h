@@ -1161,9 +1161,9 @@
  */
 //** changed due to normalluy open? endstops
 #define X_MIN_ENDSTOP_HIT_STATE LOW
-#define X_MAX_ENDSTOP_HIT_STATE LOW
+#define X_MAX_ENDSTOP_HIT_STATE HIGH
 //** changed due to normally open? endstops
-#define Y_MIN_ENDSTOP_HIT_STATE HIGH
+#define Y_MIN_ENDSTOP_HIT_STATE LOW
 #define Y_MAX_ENDSTOP_HIT_STATE HIGH
 #define Z_MIN_ENDSTOP_HIT_STATE HIGH
 #define Z_MAX_ENDSTOP_HIT_STATE HIGH
@@ -1230,7 +1230,7 @@
  //** for titan anet A8 motors on X + Y + Z with TM2209
  //** compact but powerfull motor on E with titan and TM2209
  //** second z at end
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1600, 1600, 6400, 13395}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 829}
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
