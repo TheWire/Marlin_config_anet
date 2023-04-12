@@ -1773,17 +1773,20 @@
 // @section geometry
 
 // The size of the printable area
-//** changed to 220 pending callibration
-#define X_BED_SIZE 220
-//** changed to 220 pending callibration
-#define Y_BED_SIZE 220
+//** changed to 216
+#define X_BED_SIZE 216
+//** changed to 217
+#define Y_BED_SIZE 217
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0
+//** bed starts at 4
+#define Y_MIN_POS -4
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+//** X goes 49 beyond end of bed
+#define X_MAX_POS X_BED_SIZE + 49
+//** Y goes 8 beyond end of bed
+#define Y_MAX_POS + Y_BED_SIZE + 8
 //** changed from 200 to match anet config
 #define Z_MAX_POS 240
 //#define I_MIN_POS 0
