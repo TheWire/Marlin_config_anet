@@ -1,0 +1,4 @@
+steps per unit E E792
+
+Max Acceleration (units/s2):
+M201 X700.00 Y700.00 Z100.00 E5000.00
